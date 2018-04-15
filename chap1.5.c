@@ -12,7 +12,7 @@ int main(void){/*
 		++nc;
 	printf("%ld\n", nc);
 
-	int c, numberOfLines;
+	int c, numberOfLines;C:\Users\Shriram\OneDrive - University of Iowa\practice
 	numberOfLines = 0;
 	while ((c = getchar()) != EOF)
 		if (c == '\n')
