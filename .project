@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" enumberOfCharactersoding="UTF-8"?>
 <projectDescription>
 	<name>practice</name>
 	<comment></comment>
@@ -7,13 +7,13 @@
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
-			<triggers>clean,full,incremental,</triggers>
+			<triggers>clean,full,inumberOfCharactersremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
-			<triggers>full,incremental,</triggers>
+			<triggers>full,inumberOfCharactersremental,</triggers>
 			<arguments>
 			</arguments>
 		</buildCommand>
