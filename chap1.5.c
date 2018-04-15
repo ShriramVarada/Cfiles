@@ -1,8 +1,9 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
-#define IN 1 /* inside a word */
-#define OUT 0 /* outside a word */
-int main(void){/*
+#define IN 1  inside a word
+#define OUT 0  outside a word
+int main(void){
 	int c;
 	while ((c = getchar()) != EOF)
 		putchar(c);
@@ -17,7 +18,7 @@ int main(void){/*
 	while ((c = getchar()) != EOF)
 		if (c == '\n')
 			++numberOfLines;
-	printf("%d\n", numberOfLines);*/
+	printf("%d\n", numberOfLines);
 
 	int c, numberOfLines, numberOfWords, numberOfCharacters, c1=0, state;
 	numberOfLines = numberOfWords = numberOfCharacters = 0;
@@ -41,3 +42,4 @@ int main(void){/*
 
 	return EXIT_SUCCESS;
 }
+*/

@@ -25,6 +25,8 @@ return EXIT_SUCCESS;
 int getline(char s[],int lim)
 {
 	int c, i;
+//	Similarly, it would be unfortunate if c were tested against EOF before getchar is called;
+//	therefore the call and assignment must occur before the character in c is tested.
 	for (i=0; i < lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
 		s[i] = c;
 	if (c == '\n') {
@@ -42,4 +44,5 @@ void copy(char to[], char from[])
 	while ((to[i] = from[i]) != '\0')
 		++i;
 }
+
 */
