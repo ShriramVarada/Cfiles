@@ -1,10 +1,9 @@
-/*
 #include <stdio.h>
 #include <stdlib.h>
-#define IN 1  inside a word
-#define OUT 0  outside a word
+#define IN 1
+#define OUT 0
 int main(void){
-	int c;
+	/*int c;
 	while ((c = getchar()) != EOF)
 		putchar(c);
 	long nc;
@@ -13,17 +12,18 @@ int main(void){
 		++nc;
 	printf("%ld\n", nc);
 
-	int c, numberOfLines;C:\Users\Shriram\OneDrive - University of Iowa\practice
+	int c, numberOfLines;
 	numberOfLines = 0;
 	while ((c = getchar()) != EOF)
 		if (c == '\n')
 			++numberOfLines;
-	printf("%d\n", numberOfLines);
+	printf("%d\n", numberOfLines);*/
 
-	int c, numberOfLines, numberOfWords, numberOfCharacters, c1=0, state;
+	int c, numberOfLines, numberOfWords, numberOfCharacters, c1='\n', state;
 	numberOfLines = numberOfWords = numberOfCharacters = 0;
 	while ((c = getchar()) != EOF) {
 		++numberOfCharacters;
+		//printf("%c", c);
 		if (c == '\n'){
 			++numberOfLines;
 		}
@@ -34,12 +34,10 @@ int main(void){
 			++numberOfWords;
 		}
 		c1 = c;
-	}numberOfWords++;
+	}if(numberOfLines > 0) numberOfWords++;
 	if(c1 != '\n'){
 		numberOfLines++;
 	}
 	printf("%d %d %d\n", numberOfLines, numberOfWords, numberOfCharacters);
-
 	return EXIT_SUCCESS;
 }
-*/
