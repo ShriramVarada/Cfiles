@@ -1,4 +1,4 @@
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -15,7 +15,7 @@ void strcat1(char *, char *);
 
 int main(void){
 
-	In the test part of if, while, for, etc., ``true'' just means ``non-zero'', so this makes no difference.
+	//In the test part of if, while, for, etc., ``true'' just means ``non-zero'', so this makes no difference.
 
 	printf("%o\n", BELL);
 	printf("%x\n", VTAB);
@@ -62,9 +62,9 @@ void strcat1(char s[], char t[])
 {
 	int i, j;
 	i = j = 0;
-	while (s[i] != '\0')  find end of s
+	while (s[i] != '\0')  //find end of s
 		i++;
-	while ((s[i++] = t[j++]) != '\0')  copy t
+	while ((s[i++] = t[j++]) != '\0')  //copy t
 		;
 }
-*/
+
