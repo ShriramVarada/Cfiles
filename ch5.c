@@ -32,12 +32,33 @@ void swap(int *px, int *py) /* interchange *px and *py */
 	*py = temp;
 }
 
+void quickSort(int arr[], int left, int right){
+	int last;
+	if(left < right){
+		int mid = (left+right)/2;
+
+		swap(&arr[left], &arr[mid]);
+		last=left;
+		for(int i=left+1; i < right; ++i){
+			 if(arr[i] < arr[left])
+				 swap(&arr[++last], &arr[i]);
+		}
+
+		swap(&arr[last], &arr[left]);
+
+		quickSort(arr, left, last-1);
+		quickSort(arr, last+1, right);
+	}
+}
 
 int main(void){
 	int a=1, b=2;
 	printf("a = %d, b = %d\n",a,b);
 	swap(&a,&b);
-	printf("a = %d, b = %d",a,b);
-	getint1(&b);
-return EXIT_SUCCESS;
+	printf("a = %d, b = %d\n",a,b);
+	int arr[] = {2,4,5,1,2,8,9,10};
+	quickSort(arr, 0, 7);
+	for(int i = 0; i< 8; i++)
+		printf("%d ", arr[i]);
+	return EXIT_SUCCESS;
 }
