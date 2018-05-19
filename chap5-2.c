@@ -83,19 +83,16 @@ char *month_name(int n)
 
 int main(void){
 	char* message = "hello\n";
-	//*(message+2)='4';
-	char *c=NULL;
+	char d='a';
+	char *c=&d;
 	int i=0;
 	while(*(message+i) != '\0'){
 		printf("%c", *(message+i));
-		*c = *(message++);       /*QUESTION.. WHY NOT *c = *(message + i)*/
+		*c = *(message+i);       /*QUESTION.. WHY NOT *c = *(message + i)*/
 		printf("%c\n", *c);
 		//*c++=*message++;
 		i++;
-	}/**c='\0';
-	c -= i;
-	*(c+7)='a';*/
-	//printf("\n""%s", c);
+	}
 /*
 	int nlines;
 	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
