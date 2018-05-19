@@ -7,7 +7,7 @@
 
 #ifndef CHAP6_1_H_
 #define CHAP6_1_H_
-
+#define MAXWORD 100
 #define min(a, b) ((a>b) ? b : a)
 #define max(a, b) ((a>b) ? a : b)
 
@@ -23,5 +23,10 @@ extern Point addpoint(Point, Point);
 extern int ptinRect(Point, Rectangle);
 
 Rectangle canonrect(Rectangle r);
+
+struct key {
+	char *word;
+	int count;
+};
 
 #endif /* CHAP6_1_H_ */

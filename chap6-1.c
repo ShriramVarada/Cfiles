@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "chap6-1.h"
-
+extern struct key keytab[];
 Point makePoint(int x, int y){
 	Point temp={x,y};
 	return temp;
@@ -24,13 +24,13 @@ Rectangle canonrect(struct rect r)
 	temp.pt2.y = max(r.pt1.y, r.pt2.y);
 	return temp;
 }
-
-int main(void){
-	Point a = { 0, 0};
-	Point b = {10, 10};
-	Rectangle rect = {a,b};
-	Rectangle* r = &rect;
-	printf("%d %d", r->pt1.x, r->pt2.x);
-	Point middle = makePoint(((double)a.x+b.x)/2, ((double)a.y+b.y)/2);
-	return EXIT_SUCCESS;
-}
+//
+//int main(void){
+//	Point a = { 0, 0};
+//	Point b = {10, 10};
+//	Rectangle rect = {a,b};
+//	Rectangle* r = &rect;
+//	printf("%d %d", r->pt1.x, r->pt2.x);
+//	Point middle = makePoint(((double)a.x+b.x)/2, ((double)a.y+b.y)/2);
+//	return EXIT_SUCCESS;
+//}
