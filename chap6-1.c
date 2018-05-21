@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "chap6-1.h"
-extern struct key keytab[];
+
 Point makePoint(int x, int y){
 	Point temp={x,y};
 	return temp;
@@ -23,6 +23,46 @@ Rectangle canonrect(struct rect r)
 	temp.pt2.x = max(r.pt1.x, r.pt2.x);
 	temp.pt2.y = max(r.pt1.y, r.pt2.y);
 	return temp;
+}
+
+int getword(char *word, int lim)
+{
+	int c, getch(void);
+	void ungetch(int);
+	char *w = word;
+	while (isspace(c = getch()))
+		;
+	if (c != EOF)
+		*w++ = c;
+	if (!isalpha(c)) {
+		*w = '\0';
+		return c;
+	}
+	for ( ; --lim > 0; w++)
+		if (!isalnum(*w = getch())) {
+			ungetch(*w);
+			break;
+		}
+	*w = '\0';
+	return word[0];
+}
+
+int binsearch(char *word, struct key tab[], int n)
+{
+	int cond;
+	int low, high, mid;
+	low = 0;
+	high = n - 1;
+	while (low <= high) {
+		mid = (low+high) / 2;
+		if ((cond = strcmp(word, tab[mid].word)) < 0)
+			high = mid - 1;
+		else if (cond > 0)
+			low = mid + 1;
+		else
+			return mid;
+	}
+	return -1;
 }
 //
 //int main(void){
