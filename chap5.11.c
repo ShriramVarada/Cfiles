@@ -43,6 +43,14 @@ int (*comp)(void *, void *))
 	qsort1(v, left, last-1, comp);
 	qsort1(v, last+1, right, comp);
 }
+
+void swap(void ** v, int a, int b){
+	void * temp;
+	temp = v[a];
+	v[a] = v[b];
+	v[b] = temp;
+}
+
 int getline1(char s[],int lim)
 {
 	int c, i;
@@ -71,9 +79,9 @@ int numcmp(char *s1, char *s2)
 		return 0;
 }
 
-int main(int argc, char* argv[]){
-	int nlines; /* number of input lines read */
-	int numeric = 0; /* 1 if numeric sort */
+int main(int argc, char* argv[]){/*
+	int nlines;
+	int numeric = 0;
 	if (argc > 1 && strcmp(argv[1], "-n") == 0)
 		numeric = 1;
 	if ((nlines = readlines(lineptr, MAXLINES)) >= 0) {
@@ -83,6 +91,6 @@ int main(int argc, char* argv[]){
 	} else {
 		printf("input too big to sort\n");
 		return 1;
-	}
-return EXIT_SUCCESS;
+	}*/
+
 }
