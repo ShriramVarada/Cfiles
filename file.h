@@ -10,4 +10,8 @@
 
 extern void filecopy(FILE*, FILE*);
 
+extern char* fgetc2(char* s, int n, FILE* in);
+
+extern int fputs2(char*, FILE*);
+
 #endif /* FILE_H_ */
